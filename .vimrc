@@ -8,7 +8,7 @@ set smarttab
 
 set ruler         " show current position
 set number        " show line number
-set cursorline    " highlight current line
+" set cursorline    " highlight current line
 set colorcolumn=80
 set wrap
 set showcmd
@@ -24,12 +24,14 @@ set mouse=a       " use mouse everywhere
 set autoindent
 set smartindent
 set cindent       " support indent like C/C++
+  
 
 " Color
-syntax on
-set t_Co=256
-set background=dark
-colorscheme solarized
+" syntax on
+" set t_Co=256
+" set background=dark
+" colorscheme solarized
+" colorscheme morning 
 
 " Fold
 set foldmethod=syntax
@@ -80,4 +82,13 @@ let g:syntastic_always_populate_loc_list = 1
 syntax on
 set t_Co=256
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme morning 
+
+" reset again to cover some change made by Vundle
+set showcmd
+set showmode
+set showmatch
+
+" do not show underline
+hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
